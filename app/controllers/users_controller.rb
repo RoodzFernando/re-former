@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 
-    before_action :set_user, only: [:edit] 
+  before_action :set_user, only: [:edit]
+
+  def index
+    @users = User.all
+  end
 
   def new
     @user = User.new
@@ -9,7 +13,7 @@ class UsersController < ApplicationController
   def create
       @user = User.new(user_params)
     if @user.save
-      redirect_to new_user_path
+      redirect_to "/users", notice: "user was successfully created."
     else
       render :new
     end
@@ -25,7 +29,6 @@ class UsersController < ApplicationController
 
   
   private 
-  # def set_user @user = User.find(params[:id]) end
 
   def user_params
     params.require(:user).permit(:username, :email, :password)
@@ -34,4 +37,5 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id]) 
   end
+
 end
