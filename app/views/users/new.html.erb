@@ -1,1 +1,9 @@
-this is the view file
+<form action="/users" method="post" accept-charset="UTF-8">
+Username: <input type="text" name="username"><br> <br>
+
+Email: <input type="email" name="email"><br><br>
+
+Password: <input type="password" name="password"><br>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+</form>
