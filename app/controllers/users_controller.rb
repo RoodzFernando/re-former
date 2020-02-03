@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
   end
@@ -20,7 +24,14 @@ class UsersController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    @user = User.find(params[:id])
+    if @user.save
+      redirect_to edit_user_path, notice: 'user was successfully updated.'
+    else
+      render :edit
+    end
+  end
 
   private
 
@@ -28,7 +39,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :email, :password)
   end
 
-  def set_user
-    @user = User.find(params[:id])
-  end
+  #def set_user
+  #  @user = User.find(params[:id])
+  #end
 end
