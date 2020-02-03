@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit]
+  before_action :set_user, only: [:edit, :show]
 
   def index
     @users = User.all
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to '/users', notice: 'user was successfully created.'
+      redirect_to new_user_path, notice: 'user was successfully created.'
     else
       render :new
     end
@@ -26,20 +26,21 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.save
-      redirect_to edit_user_path, notice: 'user was successfully updated.'
+    if @user.update(user_params)
+      redirect_to users_path, notice: 'user was successfully updated.'
     else
       render :edit
     end
   end
 
   private
+  
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
-
-  #def set_user
-  #  @user = User.find(params[:id])
-  #end
+  
 end
