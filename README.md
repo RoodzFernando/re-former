@@ -1,6 +1,6 @@
 # 📃 re-former
 
-in this project we build some forms, both using nearly-pure HTML and then graduating to using the helper methods that Rails provides. 
+in this project we build some forms, both using nearly-pure HTML and then graduating to using the helper methods that Rails provides.
 
 
 
