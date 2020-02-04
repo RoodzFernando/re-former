@@ -10,6 +10,23 @@ Password: <input type="password" name="password"><br>
 </form>
 -->
 
+<!--
+
+<%= form_tag("/users", method: "post") do %>
+  
+  <%= label_tag(:username, "username:") %>
+  <%= text_field_tag(:username) %>
+
+  <%= label_tag(:email, "email:") %>
+  <%= text_field_tag(:email) %>
+
+  <%= label_tag(:password, "password:") %>
+  <%= password_field_tag(:password) %>
+
+  <%= submit_tag("submit") %>
+
+<% end %>
+-->
 
 <!--
 
@@ -58,6 +75,3 @@ Password: <input type="password" name="password"><br>
     <%= form.submit %>
   </div>
 <% end %>
-
-
-
