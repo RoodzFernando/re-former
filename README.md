@@ -1,17 +1,26 @@
-# Ruby on Rails Tutorial sample application
+# 📃 re-former
 
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](https://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+in this project we build some forms, both using nearly-pure HTML and then graduating to using the helper methods that Rails provides.
 
-## License
 
-All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
 
-## Getting started
+## 📡 technologies used
+
+- ruby
+- rails
+- git
+
+ruby, rails and git was used on this project.
+
+
+
+## 🚀 the project
+
+this project can be found in https://github.com/RoodzFernando/re-former
+
+
+
+## 🔨 instructions
 
 To get started with the app, clone the repo and then install the needed gems:
 
@@ -37,5 +46,34 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails server
 ```
 
-For more information, see the
-[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
+
+
+## 🤝 contributing
+
+contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](https://github.com/RoodzFernando/re-former/development/issues).
+
+1. fork it (https://github.com/RoodzFernando/re-former/development/fork)
+2. create your working branch (git checkout -b [choose-a-name])
+3. commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. push to the branch (git push origin [chosen-name])
+5. create a new pull request
+
+
+
+## 🤖 contributor
+
+roodz fernando - [GitHub](https://github.com/RoodzFernando)
+
+firmo holanda - [GitHub](https://github.com/firmoholanda)
+
+
+
+## 🙋‍♂ show your support
+
+give a ⭐️ if you like this project!
+
+
+
+## 📝 license
+
+this project is [MIT](https://github.com/RoodzFernando/re-former/development/license.txt) licensed.
